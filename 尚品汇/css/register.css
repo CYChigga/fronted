@@ -1,0 +1,255 @@
+/* 导航栏和容器基础样式 */
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-wrapper:hover {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+/* Logo和导航链接样式 */
+.logo {
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    padding: 30px 0;
+}
+
+.nav-links ul li {
+    float: left;
+    margin-left: 40px;
+}
+
+.nav-links ul li a {
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-links ul li a:hover {
+    color: #DD302D;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #DD302D;
+    transition: width 0.3s ease;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li a.active {
+    color: #DD302D;
+}
+
+.nav-links ul li a.active::after {
+    width: 0;
+}
+
+/* 注册页面主体样式 */
+.register-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('../images/login-bg.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.register-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.register-box {
+    position: relative;
+    width: 450px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.5s ease-out;
+}
+
+/* 欢迎标题样式 */
+.welcome-title {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #DD302D 0%, #FF6B6B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.register-title {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.register-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #DD302D;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+#registerForm {
+    margin-top: 40px;
+}
+
+/* 表单样式 */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #DD302D;
+    box-shadow: 0 0 0 3px rgba(221, 48, 45, 0.1);
+}
+
+/* 错误提示样式 */
+.error-message {
+    color: #ff4444;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.input-group.error input {
+    border-color: #ff4444;
+}
+
+.input-group.error .error-message {
+    display: block;
+}
+
+/* 按钮样式 */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #DD302D;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+button:hover {
+    background: #c62828;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(221, 48, 45, 0.3);
+}
+
+/* 右侧介绍区样式 */
+.intro-section {
+    width: 400px;
+    margin-left: 80px;
+}
+
+.intro-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    animation: fadeInRight 0.5s ease forwards;
+    opacity: 0;
+}
+
+/* 动画效果 */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.intro-item:nth-child(1) { animation-delay: 0.2s; }
+.intro-item:nth-child(2) { animation-delay: 0.4s; }
+
+/* 额外的交互动画 */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.input-group.error input {
+    animation: shake 0.3s ease-in-out;
+}

@@ -1,0 +1,339 @@
+/* 导航栏样式 */
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-wrapper:hover {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+/* 容器样式 */
+.container {
+    width: 1190px;
+    margin: 0 auto;
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+
+/* Logo样式 */
+.logo {
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* 导航链接样式 */
+.nav-links {
+    padding: 30px 0;
+}
+
+.nav-links ul li {
+    float: left;
+    margin-left: 40px;
+}
+
+.nav-links ul li a {
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links ul li a:hover {
+    color: #DD302D;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #DD302D;
+    transition: width 0.3s ease;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+/* 商品详情区域 */
+.product-detail {
+    margin-top: 100px;
+    padding: 20px 0;
+}
+
+/* 商品展示区 */
+.product-gallery {
+    width: 500px;
+}
+
+.main-image {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #eee;
+    position: relative;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.thumb-list {
+    margin-top: 20px;
+}
+
+.thumb-list ul {
+    display: flex;
+    gap: 10px;
+}
+
+.thumb-list li {
+    width: 80px;
+    height: 80px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.thumb-list li:hover {
+    border-color: #DD302D;
+}
+
+.thumb-list li.active {
+    border-color: #DD302D;
+}
+
+.thumb-list img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 商品信息区 */
+.product-info {
+    width: 640px;
+}
+
+.product-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.product-desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* 价格区域 */
+.price-box {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.price {
+    margin-bottom: 10px;
+}
+
+.price .label {
+    font-size: 14px;
+    color: #666;
+}
+
+.price .amount {
+    font-size: 28px;
+    color: #DD302D;
+    margin-left: 10px;
+}
+
+/* 规格选择 */
+.product-attrs {
+    margin-bottom: 30px;
+}
+
+.attr-item {
+    margin-bottom: 20px;
+}
+
+.attr-item .label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.options li {
+    float: left;
+    padding: 8px 20px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.options li:hover {
+    border-color: #DD302D;
+}
+
+.options li.active {
+    border-color: #DD302D;
+    background: #DD302D;
+    color: white;
+}
+
+/* 数量选择 */
+.quantity {
+    margin-bottom: 30px;
+}
+
+.quantity-wrapper {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+.quantity button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+.quantity input {
+    width: 50px;
+    height: 36px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+/* 购买按钮 */
+.action-box {
+    margin-top: 30px;
+}
+
+.agreement {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons button {
+    flex: 1;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-to-cart {
+    background: #fff;
+    border: 1px solid #DD302D;
+    color: #DD302D;
+}
+
+.add-to-cart:hover {
+    background: #fff5f5;
+}
+
+.buy-now {
+    background: #DD302D;
+    color: white;
+}
+
+.buy-now:hover {
+    background: #c62828;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(221, 48, 45, 0.3);
+}
+
+.footer {
+    height: 440px;
+    background-color: #483E3E;
+    margin-top: 49px;
+}
+
+/* 每一个列表样式 */
+.links-list{
+    width: 190px;
+    height: 176px;
+    float: left;
+    margin-top: 48px;
+    margin-bottom: 90px;
+}
+
+/* 每一个列表项样式 */
+.links-list li {
+    font-size: 14px;
+    margin: 5px 0;
+}
+.top-links .links-list,
+.top-links .links-list a {
+    color: white;
+}
+
+/* 分割线样式 */
+.cut {
+    height: 1px;
+    border-bottom: 1px solid #584D4D;
+}
+
+/* 使文字居中，但是块元素不可以直接使用text-align，对需要居中的内容转换为行内块 */
+.bottom-links {
+    text-align: center;
+}
+
+.bottom-links-list {
+    display: inline-block;
+}
+
+.bottom-links-list {
+    margin-top: 47px;
+}
+
+/* 设置每一个列表项的左浮动 */
+.bottom-links-list li {
+    float: left;
+}
+
+/* 设置文字颜色和大小 */
+.bottom-links-list li span, 
+.bottom-links-list li a {
+    color: white;
+    font-size: 14px;
+}
+
+.bottom-links-list li a {
+    padding: 0 26px;
+}
+
+/* 备案号 */
+.copyright {
+    color: white;
+}
+/* #endregion页脚区end */

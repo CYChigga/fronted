@@ -1,0 +1,500 @@
+    /* 基础设置版心 */
+    .container {
+        width: 1190px;
+     
+        margin: 0 auto;
+        
+    }
+
+    /* #region顶部导航条start */
+    .topbar {
+        height: 30px;
+        background-color: #ececec;
+    }
+
+    .welcome {
+        height: 30px;
+        line-height: 30px;
+        color: #666;
+        font-size: 0;
+    }
+
+    .welcome .hello {
+        margin-right: 28px;
+    }
+
+    .welcome span,
+    .welcome a {
+        font-size: 12px;
+    }
+
+    .welcome .login {
+        /* 分隔线 */
+        border-right: 1px solid #666;
+        /* 分隔线间距 */
+        padding-right: 10px;
+    }
+
+    .welcome .register {
+        padding-left: 10px;
+    }
+
+    .topbar-nav .list {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .topbar-nav .list li {
+        float: left;
+    }
+
+    .topbar-nav .list li a {
+        padding: 0 15px;
+        border-right: 1px solid #666;
+    }
+
+    .topbar-nav .list li:first-child a {
+        padding-left: 0;
+    }
+
+    .topbar-nav .list li:last-child a {
+        padding-right: 0;
+        border-right: none;
+    }
+
+    /* #endregion顶部导航条end */
+
+    /* #region头部start */
+
+    .header {
+        height: 120px;
+        background-color: #f5f5f5;
+    }
+
+    .header .search form {
+        margin-top: 42px;
+        font-size: 0;
+    }
+
+    .header .search input {
+        width: 508px;
+        height: 34px;
+        border: 1px solid #dd302d;
+    }
+
+    .header .search button {
+        width: 80px;
+        height: 36px;
+        background-color: #dd302d;
+        color: #fff;
+        border: none;
+        /* 垂直居中 */
+        vertical-align: top;
+        background-image: url(../images/serch_icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    /* #endregion头部end */
+
+    /* #region主导航start */
+    .main-nav {
+        height: 48px;
+        border-bottom: 1px solid #dd302d;
+    }
+
+    .container .all-types {
+        height: 48px;
+        width: 190px;
+        background-color: #dd302d;
+        color: #fff;
+        /* 水平居中 */
+        text-align: center;
+        /* 垂直居中 */
+        line-height: 48px;
+        font-size: 16px;
+    }
+
+    .main-nav-list {
+        height: 48px;
+        line-height: 48px;
+    }
+
+    .main-nav-list li {
+        float: left;
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    /* #endregion主导航end */
+
+    /* #region内容区start */
+    .main-content {
+        margin-top: 10px;
+        /* 移除固定高度，让内容自然扩展 */
+        /* height: 458px; */
+    }
+
+    .main-content .side-nav {
+        width: 190px;
+        height: 458px;
+        background-color: #fff;
+    }
+
+    .main-content .side-nav li {
+        padding-left: 16px;
+        font-size: 14px;
+        height: 28px;
+        line-height: 28px;
+        position: relative;
+    }
+
+    .main-content .side-nav li:hover>a {
+        color: #fff;
+    }
+
+    .main-content .side-nav li:hover {
+        background-color: #dd302d;
+    }
+
+    .second-menu {
+        width: 680px;
+        min-height: 458px;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 190px;
+        padding-left: 20px;
+        display: none;
+    }
+
+    .main-content .side-nav li:hover .second-menu {
+        display: block;
+    }
+
+    .second-menu dl {
+        min-height: 36px;
+        line-height: 28px;
+        padding: 4px 0;
+    }
+
+    .second-menu dl:first-child {
+        margin-top: 10px;
+    }
+
+    .second-menu dt {
+        float: left;
+        width: 70px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .second-menu dd {
+        float: left;
+        /* padding:0 10px;
+    border-left:1px solid #666;   */
+    }
+
+    /* dd加padding会让border按照dd的高度来显示 */
+    .second-menu dd a {
+        padding: 0 10px;
+        border-left: 1px solid #666;
+    }
+
+    .main-content .banner {
+        width: 690px;
+        height: 458px;
+        background-color: pink;
+        margin: 0 10px;
+    }
+
+    .main-content .side-other {
+        width: 290px;
+        height: 458px;
+    }
+
+    .side-other .message {
+        width: 260px;
+        height: 158px;
+        padding: 0 10px;
+        border: 1px solid #d9d9d9;
+    }
+
+    .side-other .message .title {
+        height: 38px;
+        line-height: 38px;
+        border-bottom: 1px solid #d9d9d9;
+    }
+
+    .side-other .message .title span {
+        font-size: 14px;
+    }
+
+    .side-other .message .title a {
+        font-size: 12px;
+    }
+
+    .side-other .message .msg-list {
+        height: 26px;
+        line-height: 26px;
+    }
+
+    /* 下部分图标导航区 */
+    .bottom-other-nav {
+        height: 290px;
+        width: 290px;
+        margin-top: 10px;
+        /* background-color: grey; */
+        overflow: hidden;
+    }
+
+    .bottom-other-nav .other-list li {
+        height: 70px;
+        width: 48px;
+        /* background-color: aqua; */
+        float: left;
+        /* 每一个列表项左右外边距为11 */
+        margin: 0 11px;
+        /* 文字水平居中 */
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        /* 鼠标为点击效果 */
+        cursor: pointer;
+    }
+
+    /* 控制第二行的上下外边距 */
+    .bottom-other-nav .other-list:nth-child(2) {
+        margin: 17px 0;
+    }
+
+    /* 单独为每一行的第一个列表项设置左侧外边距 */
+    .bottom-other-nav .other-list li:first-child {
+        margin-left: 16px;
+    }
+
+    /* 设置距离父元素的上外边距 */
+    .bottom-other-nav .other-list:first-child {
+        margin-top: 26px;
+    }
+
+    /* 设置背景图片 */
+    .bottom-other-nav .other-list .picture {
+        width: 48px;
+        height: 48px;
+        background-image: url('../images/精灵图-侧边功能.png');
+    }
+
+    /* 第一行第一个 */
+    .bottom-other-nav .other-list:nth-child(1) li:nth-child(1) .picture {
+        background-position: 0px 0px;
+    }
+
+    /* 第一行第二个 */
+    .bottom-other-nav .other-list:nth-child(1) li:nth-child(2) .picture {
+        background-position: -48px 0px;
+    }
+    /* 第一行第三个 */
+    .bottom-other-nav .other-list:nth-child(1) li:nth-child(3) .picture {
+        background-position: -96px 0px;
+    }
+
+    /* 第一行第四个 */
+    .bottom-other-nav .other-list:nth-child(1) li:nth-child(4) .picture {
+        background-position: -144px 0px;
+    }
+
+    /* 第二行第一个 */
+    .bottom-other-nav .other-list:nth-child(2) li:nth-child(1) .picture {
+        background-position: 0px -48px;
+    }
+
+    /* 第二行第二个 */
+    .bottom-other-nav .other-list:nth-child(2) li:nth-child(2) .picture {
+        background-position: -48px -48px;
+    }
+
+    /* 第二行第三个 */
+    .bottom-other-nav .other-list:nth-child(2) li:nth-child(3) .picture {
+        background-position: -96px -48px;
+    }
+
+    /* 第二行第四个 */
+    .bottom-other-nav .other-list:nth-child(2) li:nth-child(4) .picture {
+        background-position: -144px -48px;
+    }
+
+    /* 第三行第一个 */
+    .bottom-other-nav .other-list:nth-child(3) li:nth-child(1) .picture {
+        background-position: 0px -96px;
+    }
+
+    /* 第三行第二个 */
+    .bottom-other-nav .other-list:nth-child(3) li:nth-child(2) .picture {
+        background-position: -48px -96px;
+    }
+
+    /* 第三行第三个 */
+    .bottom-other-nav .other-list:nth-child(3) li:nth-child(3) .picture {
+        background-position: -96px -96px;
+    }
+
+    /* 第三行第四个 */
+    .bottom-other-nav .other-list:nth-child(3) li:nth-child(4) .picture {
+        background-position: -144px -96px;
+    }
+
+    /* #endregion内容区end */
+    /* #region秒杀区 */
+        
+    .seckill {
+    margin-top: 10px;
+    /* background-color: #666; */
+    }
+
+    .seckill img{
+        float: left;
+        margin-right: 11px;
+        cursor: pointer;
+    }
+    .seckill img:last-child{
+        margin-right: 0;
+    }
+
+    /* #endregion秒杀区 */
+    /* #region 楼层 */
+    .floor{
+        margin-top: 48px;
+    }
+    .floor-name{
+        font-size: 20px;
+    }
+
+    .floor-nav{
+        height: 30px;
+        line-height: 30px;
+        padding-bottom: 4px;
+        border-bottom:2px solid #dd302d;
+    }
+    
+    .floor-nav-list li{
+        float: left;
+        font-size: 14px;
+    }
+    .floor-nav-list li a{
+        padding: 0 10px;
+        border-right: 1px solid #666;
+    }
+
+    .floor-nav-list li:first-child  a{
+        padding-left: 0;
+    }
+    .floor-nav-list li:last-child a{
+        border-right: 0;
+        border: 0;
+    }
+    .floor-info .item{
+        float: left;
+    }
+    .floor-info .item1{
+        width: 190px;
+        height: 392px;
+        padding: 20px;
+        
+    }
+    .item1-list{
+        margin-bottom: 29px;
+    }
+    .item1-list li{
+        width:90px;
+        height: 22px;
+        padding-left: 3.5px;
+        border-bottom:1px solid grey;
+        font-size: 16px;
+        text-align: center;
+    }
+    .item1-list li:nth-child(2n-1){
+          float: left;;
+    }
+    .item1-list li:nth-child(2n){
+          float: right;
+    }
+     .item1-list li:nth-child(3),
+     .item1-list li:nth-child(4){
+      margin: 14.4px 0;
+     }
+     
+    .floor-info .item2{
+        width: 340px;
+        height: 432px;
+    }
+    .floor-info .item3,
+    .floor-info .item4,
+    .floor-info .item5{
+        width: 206px;
+        height: 432px;
+    }
+    .floor-info .item3 img,
+    .floor-info .item4 img,
+    .floor-info .item5 img{
+     border-bottom:1px solid #e2e2e2;
+    }
+    .floor-info .item3,
+    .floor-info .item4{
+        border-right: 1px solid #e2e2e2;
+    }
+    /* #endregion 楼层 */
+    /* #region 页脚 */
+    .footer {
+        height: 440px;
+        background-color: #483e3e;
+    }
+    .links-list{
+        width: 190px;
+        height: 176px;
+        float:left;
+        margin-top: 48px;
+        margin-right: 10px;
+    }
+    .links-list:last-child{
+        margin-right: 0;
+    }
+    .links-list  a{
+        color: #fff;
+        font-size: 14px;
+    }
+    .line{
+        height: 1px;
+        margin-top: 22px;
+        background-color: #584d4d;
+    }
+    .bottom-links {
+        text-align: center;
+        margin-top: 47px;
+    }
+    .bottom-links-list{
+        display: inline-block;
+    }
+    .bottom-links-list li {
+        float: left;
+    }
+     .bottom-links-list li  a{
+        padding: 0 26px;
+        border-right: 1px solid #fff;
+        color: #fff;
+     }
+     .bottom-links--list li:first-child  a{
+        padding-left: 0;
+     }
+     .bottom-links-list li:last-child a{
+        padding-right: 0;
+        border: 0;
+     }
+     .copyright{
+        font-size: 12px;
+        color: #fff;
+        margin-top: 20px;
+     }
+
+     
+      /* #endregion 页脚 */

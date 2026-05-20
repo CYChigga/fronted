@@ -1,0 +1,285 @@
+/* 导航栏基础样式 */
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-wrapper:hover {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+/* Logo样式调整 */
+.logo {
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* 导航链接样式 */
+.nav-links {
+    padding: 30px 0;
+}
+
+.nav-links ul li {
+    float: left;
+    margin-left: 40px;
+}
+
+.nav-links ul li a {
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-links ul li a:hover {
+    color: #DD302D;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #DD302D;
+    transition: width 0.3s ease;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li a.active::after {
+    width: 0;
+}
+
+/* 登录区域样式 */
+.login-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('../images/login-bg.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.login-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.login-box {
+    position: relative;
+    width: 400px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.5s ease-out;
+    margin-top: 40px;
+}
+
+.welcome-title {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-title {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 修复输入框样式 */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+    width: 100%;  /* 确保宽度100% */
+}
+
+.input-group input {
+    width: calc(100% - 30px);  /* 减去内边距 */
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;  /* 使用border-box确保宽度计算准确 */
+}
+
+.input-group input:focus {
+    border-color: #DD302D;
+    box-shadow: 0 0 0 3px rgba(221, 48, 45, 0.1);
+}
+
+.forgot-password {
+    color: #DD302D;
+    text-decoration: none;
+}
+
+/* 修复按钮样式 */
+button {
+    width: calc(100% - 0px);  /* 按钮宽度修正 */
+    padding: 14px;
+    background: #DD302D;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 20px 0;  /* 增加上下间距 */
+}
+
+button:hover {
+    background: #c62828;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(221, 48, 45, 0.3);
+}
+
+.register-hint {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.register-hint a {
+    color: #DD302D;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* 用户协议选项框样式 */
+.agreement-check {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.agreement-check input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.agreement-check a {
+    color: #DD302D;
+    text-decoration: none;
+    margin: 0 4px;
+}
+
+.agreement-check a:hover {
+    text-decoration: underline;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 添加右侧介绍区样式 */
+.intro-section {
+    width: 400px;
+    margin-left: 80px;
+    padding-top: 100px;
+}
+
+.intro-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.intro-item:hover {
+    transform: translateX(-10px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.intro-content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.intro-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 修改登录区域布局 */
+.login-section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.login-box {
+    margin-right: 40px;
+}
+
+/* 添加响应式动画 */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.intro-item {
+    animation: fadeInRight 0.5s ease forwards;
+    animation-delay: calc(var(--index) * 0.2s);
+    opacity: 0;
+}
+
+.intro-item:nth-child(1) { --index: 1; }
+.intro-item:nth-child(2) { --index: 2; }
+.intro-item:nth-child(3) { --index: 3; }

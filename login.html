@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 鲸鱼商城</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="nav-wrapper">
+        <div class="container clearfix">
+            <div class="logo leftfix">
+                <img src="./images/logo.png" alt="商城logo" />
+            </div>
+            <div class="nav-links rightfix">
+                <ul class="clearfix">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="home.html">商城主页</a></li>
+                    <li><a href="register.html">注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 登录区域 -->
+    <div class="login-section">
+        <div class="container clearfix">
+            <div class="login-box leftfix">
+                <h2 class="welcome-title">欢迎回来</h2>
+                <p class="login-title">登录您的账号</p>
+                
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="text" placeholder="用户名/手机号/邮箱" required>
+                        <span class="input-focus-effect"></span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" placeholder="请输入密码" required>
+                        <span class="input-focus-effect"></span>
+                    </div>
+                    
+                    <div class="agreement-check">
+                        <input type="checkbox" id="agreement" required>
+                        <label for="agreement">
+                            我已阅读并同意
+                            <a href="#">《用户协议》</a>和
+                            <a href="#">《隐私政策》</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit">登 录</button>
+                </form>
+                
+                <div class="register-hint">
+                    还没有账号？<a href="register.html">立即注册</a>
+                </div>
+            </div>
+            
+            <div class="intro-section rightfix">
+                <div class="intro-item">
+                    <div class="intro-icon">
+                        <i class="secure-icon"></i>
+                    </div>
+                    <div class="intro-content">
+                        <h3>安全购物保障</h3>
+                        <p>专业的品质把控，让您放心选购</p>
+                    </div>
+                </div>
+                
+                <div class="intro-item">
+                    <div class="intro-icon">
+                        <i class="delivery-icon"></i>
+                    </div>
+                    <div class="intro-content">
+                        <h3>极速物流配送</h3>
+                        <p>今日下单，次日送达</p>
+                    </div>
+                </div>
+                
+                <div class="intro-item">
+                    <div class="intro-icon">
+                        <i class="service-icon"></i>
+                    </div>
+                    <div class="intro-content">
+                        <h3>贴心售后服务</h3>
+                        <p>7*24小时在线客服支持</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

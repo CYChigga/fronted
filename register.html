@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 - 鲸鱼商城</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="nav-wrapper">
+        <div class="container clearfix">
+            <div class="logo leftfix">
+                <img src="./images/logo.png" alt="商城logo" />
+            </div>
+            <div class="nav-links rightfix">
+                <ul class="clearfix">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="home.html">商城主页</a></li>
+                    <li><a href="login.html">登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 注册区域 -->
+    <div class="register-section">
+        <div class="container clearfix">
+            <div class="register-box leftfix">
+                <h2 class="welcome-title">欢迎来到鲸鱼商城</h2>
+                <p class="register-title">创建您的账号</p>
+                
+                <form id="registerForm">
+                    <div class="input-group">
+                        <input type="text" placeholder="用户名" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="tel" placeholder="手机号码" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" placeholder="设置密码" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" placeholder="确认密码" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="agreement-check">
+                        <input type="checkbox" id="agreement" required>
+                        <label for="agreement">
+                            我已阅读并同意
+                            <a href="#">《用户协议》</a>和
+                            <a href="#">《隐私政策》</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit">注 册</button>
+                </form>
+                
+                <div class="login-hint">
+                    已有账号？<a href="login.html">立即登录</a>
+                </div>
+            </div>
+            
+            <div class="intro-section rightfix">
+                <div class="intro-item">
+                    <div class="intro-icon">
+                        <i class="member-icon"></i>
+                    </div>
+                    <div class="intro-content">
+                        <h3>会员专享特权</h3>
+                        <p>专享优惠活动，独家礼遇不容错过</p>
+                    </div>
+                </div>
+                
+                <div class="intro-item">
+                    <div class="intro-icon">
+                        <i class="points-icon"></i>
+                    </div>
+                    <div class="intro-content">
+                        <h3>积分奖励</h3>
+                        <p>消费即可获得积分，享受更多优惠</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

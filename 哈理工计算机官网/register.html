@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="./css/reset.css">
+     <link rel="stylesheet" href="./css/register.css">
+    <!-- 引入阿里图标库 -->
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2143783_iq6z4ey5vu.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo"><img src="./images/logo.png" alt="哈尔滨理工大学"></div>
+    </div>
+    <div class="wrapper">
+        <div class="card">
+            <h3>新用户注册</h3>
+            <form id="registerForm">
+                <!-- 用户名 -->
+                <div class="form-item">
+                    <span class="iconfont icon-zhanghao"></span>
+                    <input name="username" type="text" placeholder="设置用户名称">
+                    <span class="msg"></span>
+                </div>
+                <!-- 手机号 -->
+                <div class="form-item">
+                    <span class="iconfont icon-shouji"></span>
+                    <input name="phone" type="text" placeholder="输入手机号码">
+                    <span class="msg"></span>
+                </div>
+                <!-- 验证码 -->
+                <div class="form-item">
+                    <span class="iconfont icon-zhibiaozhushibiaozhu"></span>
+                    <input name="code" type="text" placeholder="短信验证码">
+                    <span class="msg"></span>
+                    <a class="code-btn" href="javascript:;">发送验证码</a>
+                </div>
+                <!-- 密码 -->
+                <div class="form-item">
+                    <span class="iconfont icon-suo"></span>
+                    <input name="password" type="password" placeholder="设置6至20位字母、数字和符号组合">
+                    <span class="msg"></span>
+                </div>
+                <!-- 确认密码 -->
+                <div class="form-item">
+                    <span class="iconfont icon-suo"></span>
+                    <input name="confirm" type="password" placeholder="请再次输入上面密码">
+                    <span class="msg"></span>
+                </div>
+                <!-- 协议 -->
+                <div class="agree">
+                    <i class="iconfont icon-queren"></i>
+                    <span>已阅读并同意 <a href="javascript:;">《用户服务协议》</a></span>
+                </div>
+                <!-- 提交 -->
+                <div class="form-item">
+                    <button type="submit" class="submit-btn">下一步</button>
+                </div>
+                <div class="login-link">
+                    已有账号？<a href="./login.html">立即登录</a>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="./js/register.js"></script>
+</body>
+</html>

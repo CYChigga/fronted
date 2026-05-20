@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/reset.css">
+     <link rel="stylesheet" href="./css/login.css">
+    <!-- 引入阿里图标库 -->
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2143783_iq6z4ey5vu.css">
+  </head>
+<body>
+    <div class="nav">
+        <div class="logo"><img src="./images/logo.png" alt="哈尔滨理工大学"></div>
+    </div>
+    <div class="content">
+        <!-- Tab 导航 -->
+        <div class="tab-nav">
+            <a href="javascript:;" class="active" data-id="0">账户登录</a>
+ 
+        </div>
+        <!-- 账户登录面板 -->
+        <div class="tab-pane" id="pane-account">
+            <div class="input-group">
+                <span class="iconfont icon-zhanghao"></span>
+                <input type="text" placeholder="请输入用户名称/手机号码" name="username" required>
+                <span class="msg"></span>
+            </div>
+            <div class="input-group">
+                <span class="iconfont icon-suo"></span>
+                <input type="password" placeholder="请输入密码" name="password" required>
+                <span class="msg"></span>
+            </div>
+            <div class="agree">
+                <label for="my-checkbox">
+                    <input type="checkbox" id="my-checkbox" name="agree">
+                </label>
+                <span>我已同意 <a href="javascript:;">《服务条款》</a> 和 <a href="javascript:;">《隐私政策》</a></span>
+            </div>
+            <div class="button">
+                <button type="submit" class="dl">登 录</button>
+            </div>
+            <div class="button" style="margin-top: 10px;">
+                <a href="./register.html">免费注册</a>
+            </div>
+        </div>
+    </div>
+<script src="./js/login.js"></script>
+</body>
+</html>

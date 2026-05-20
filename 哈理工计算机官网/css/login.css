@@ -1,0 +1,196 @@
+        body, html {
+            width: 100%;
+            height: 100%;
+            font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        /* 顶部导航 */
+        .nav {
+            width: 100%;
+            height: 80px;
+            background-color: #105fa5;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            margin-left: 10px;
+            height: 80px;
+        }
+        /* 登录卡片 */
+        .content {
+            width: 500px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            margin: 80px auto;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(16, 95, 165, 0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            padding: 40px;
+        }
+        .content:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(16, 95, 165, 0.2);
+        }
+        /* Tab 切换 */
+        .tab-nav {
+            display: flex;
+            border-bottom: 2px solid #e5e9f2;
+            margin-bottom: 24px;
+        }
+        .tab-nav a {
+            flex: 1;
+            text-align: center;
+            padding: 10px 0;
+            color: #666;
+            font-size: 18px;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s;
+        }
+        .tab-nav a.active {
+            color: #105fa5;
+            font-weight: 600;
+        }
+        .tab-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 40px;
+            height: 2px;
+            background: #105fa5;
+            transform: translateX(-50%);
+        }
+        .tab-pane {
+            display: block;
+        }
+        .link {
+            text-align: right;
+            margin-bottom: 18px;
+        }
+        .link a {
+            color: #105fa5;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 10px 0;
+            display: inline-block;
+        }
+        /* 输入框 */
+        .input-group {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .input-group .iconfont {
+            position: absolute;
+            left: 14px;
+            top: 24px;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        .input-group input {
+            width: 100%;
+            box-sizing: border-box;
+            height: 48px;
+            border-radius: 12px;
+            background-color: #f8f9fa;
+            border: 2px solid transparent;
+            padding-left: 42px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+        .input-group input:focus {
+            border-color: #105fa5;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 4px rgba(16, 95, 165, 0.1);
+            outline: none;
+        }
+        .input-group input:focus + .iconfont,
+        .input-group input:not(:placeholder-shown) + .iconfont {
+            color: #105fa5;
+        }
+        .input-group input::placeholder {
+            color: #aaa;
+        }
+        .input-group .msg {
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+            font-size: 12px;
+            color: #e74c3c;
+        }
+        /* 协议 */
+        .agree {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .agree input[type="checkbox"] {
+            margin-right: 8px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+        .agree label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .agree a {
+            color: #105fa5;
+            text-decoration: none;
+        }
+        /* 按钮 */
+        .button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .button .dl {
+            width: 100%;
+            height: 48px;
+            background: linear-gradient(135deg, #105fa5, #1a78c9);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 4px;
+            box-shadow: 0 4px 10px rgba(16, 95, 165, 0.3);
+        }
+        .button .dl:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(16, 95, 165, 0.4);
+            background: linear-gradient(135deg, #0d4b85, #105fa5);
+        }
+        .button .dl:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(16, 95, 165, 0.3);
+        }
+        .button a {
+            color: #105fa5;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 10px 0;
+            display: inline-block;
+        }
+        .register-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .register-link a {
+            color: #105fa5;
+            text-decoration: none;
+        }
+
+        .qr-tip {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }

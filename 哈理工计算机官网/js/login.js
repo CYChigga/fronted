@@ -1,28 +1,4 @@
-    // 获取导航容器和所有面板元素
-        const tabNav = document.querySelector('.tab-nav');
-        const panes = document.querySelectorAll('.tab-pane');
-
-        // 将点击事件绑定在父容器上，利用事件委托提升性能
-        tabNav.addEventListener('click', function(e) {
-            // 确保点中的是 <a> 标签
-            if (e.target.tagName === 'A') {
-                // 移除旧的激活状态，给当前点击的元素加上激活状态
-                tabNav.querySelector('.active').classList.remove('active');
-                e.target.classList.add('active');
-                
-                // 隐藏所有面板
-                panes.forEach(pane => pane.style.display = 'none');
-                
-                // 通过 dataset 读取自定义属性 data-id 的值
-                const id = e.target.dataset.id;
-                if (id === '0') {
-                    document.getElementById('pane-account').style.display = 'block';
-                } else {
-                    document.getElementById('pane-qr').style.display = 'block';
-                }
-            }
-        });
-
+   
         // 获取表单相关元素
         const form = document.querySelector('#pane-account');
         const agreeCheckbox = document.getElementById('my-checkbox');
@@ -30,7 +6,7 @@
         const passwordInput = document.querySelector('[name="password"]');
         const loginBtn = document.querySelector('.dl');
 
-        // 失去焦点且内容改变时触发 change 事件进行验证
+        // 失去焦点且内容改变时触发 change事件 进行用户名验证
         usernameInput.addEventListener('change', verifyAccount);
         function verifyAccount() {
             // 获取当前输入框的下一个兄弟节点（即错误提示 span）
@@ -63,7 +39,7 @@
             return true;
         }
 
-        // 登录按钮点击事件
+        // 登录按钮点击事件 进行登录验证
         loginBtn.addEventListener('click', function(e) {
             // 检查是否勾选协议
             if (!agreeCheckbox.checked) {

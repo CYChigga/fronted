@@ -9,7 +9,6 @@ autoplay(); // 页面加载后立即开始自动播放
 
 
 //   选中当前索引对应的图片，移除其他图片的激活状态
- 
 function selectimglist() {
     // 先清除所有图片的激活类
     for (let i = 0; i < imglist.length; i++) {
@@ -20,7 +19,6 @@ function selectimglist() {
 }
 
 //   自动播放函数：每隔3秒切换到下一张  
- 
 function autoplay() {
     time = setInterval(function () {
         // 判断是否到最后一张，是则回到第一张，否则索引+1

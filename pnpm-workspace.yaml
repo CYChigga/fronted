@@ -1,0 +1,7 @@
+allowBuilds:
+  '@apollo/protobufjs': true
+  '@prisma/engines': true
+  bcrypt: true
+  es5-ext: set this to true or false
+  prisma: true
+  unrs-resolver: false

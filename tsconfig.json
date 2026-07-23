@@ -1,0 +1,30 @@
+// 定义TypeScript的编译选项
+{
+  "compilerOptions": {
+    // 指定生成的模块代码系统为Node.js 18+
+    "module": "commonjs",
+    // 如何查找第三方模块的导入路径
+    "moduleResolution": "node",
+    "resolvePackageJsonExports": false,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    // 启动实验性的装饰器特性
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    // 指定ecmascript的目标版本为ES2023
+    "target": "ES2023",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false
+  }
+}

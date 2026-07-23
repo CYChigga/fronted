@@ -1,0 +1,37 @@
+# Schema定义各种数据类型 前后端共同遵守的接口协议
+
+# 数据对象类型
+type User {
+  id: Int!
+  name: String!
+  email: String!
+}
+
+# 输入类型
+input CreateUserInput {
+  name: String!
+  email: String!
+  password: String!
+}
+
+# 查
+type Query {
+  users: [User!]!              # 查全部用户
+  user(id: Int!): User         # 按 ID 查单个
+  userByEmail(email: String!): User  # 按邮箱查（登录用）
+}
+
+# 登录返回的对象
+type LoginResult {
+  success: Boolean!
+  message: String!
+  user: User
+  token: String
+}
+
+# 增删改 登录
+type Mutation {
+  login(email: String!, password: String!): LoginResult!
+  createUser(createUserInput: CreateUserInput!): User!
+  deleteUser(id: Int!): User!
+}
